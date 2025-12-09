@@ -1,0 +1,29 @@
+{
+    "pizzas_predeterminadas": {
+        "margarita": 38000,
+        "pepperoni": 20000,
+        "hawaiana": 19000,
+        "vegetariana": 21000
+    },
+    "tamaños": {
+        "pequeña": 10000,
+        "mediana": 15000,
+        "grande": 25000
+    },
+    "masas": {
+        "delgada": 1000,
+        "gruesa": 2000,
+        "borde_queso": 5000
+    },
+    "adicionales": {
+        "queso_extra": 3000,
+        "champiñones": 3500,
+        "jamon": 3000,
+        "aceitunas": 4000
+    },
+    "bebidas": {
+        "gaseosa_personal": 3500,
+        "gaseosa_familiar": 5500,
+        "agua": 3000
+    }
+}

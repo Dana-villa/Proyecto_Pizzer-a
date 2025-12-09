@@ -76,3 +76,4 @@ def mostrar_menu_principal(numero_mesa, precios):
         
         elif opcion == 4:
             # Ver total y salir.
+            break  # Salimos del bucle principal.
