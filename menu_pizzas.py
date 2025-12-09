@@ -26,6 +26,8 @@ def mostrar_menu_pizzas(total_actual, precios):
     precio_pepperoni = obtener_precio(precios, "pizzas_predeterminadas", "pepperoni")
     precio_hawaiana = obtener_precio(precios, "pizzas_predeterminadas", "hawaiana")
     precio_vegetariana = obtener_precio(precios, "pizzas_predeterminadas", "vegetariana")
+
+    pizzas = []
     
     # Este bucle se repite hasta que el cliente decida regresar.
     while True:
@@ -62,13 +64,22 @@ def mostrar_menu_pizzas(total_actual, precios):
         
         # Agregamos el precio de la pizza seleccionada
         if opcion == 1:
+            margarita = {"Pizza_Margarita": precio_margarita}
             total_actual += precio_margarita
+            pizzas.append(margarita)
         elif opcion == 2:
+            peperoni = {"Pizza_Peperoni": precio_pepperoni}
             total_actual += precio_pepperoni
+            pizzas.append(peperoni)
         elif opcion == 3:
+            hawaiana = {"Pizza_hawaiana": precio_hawaiana}
             total_actual += precio_hawaiana
+            pizzas.append(hawaiana)
         elif opcion == 4:
+            vegetariana = {"Pizza_vegetariana": precio_vegetariana}
             total_actual += precio_vegetariana
+            pizzas.append(vegetariana)
+        print(pizzas)
         
         print(f"¡Pizza agregada!. Total actual: ${total_actual:}")
         time.sleep(1)
