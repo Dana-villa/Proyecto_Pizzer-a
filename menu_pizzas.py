@@ -21,31 +21,31 @@ def mostrar_menu_pizzas(total_actual, precios):
     Retorna:
         float: El nuevo total después de agregar pizzas
     """
-    # Obtenemos los precios de las pizzas
+    # Obtenemos los precios de las pizzas.
     precio_margarita = obtener_precio(precios, "pizzas_predeterminadas", "margarita")
     precio_pepperoni = obtener_precio(precios, "pizzas_predeterminadas", "pepperoni")
     precio_hawaiana = obtener_precio(precios, "pizzas_predeterminadas", "hawaiana")
     precio_vegetariana = obtener_precio(precios, "pizzas_predeterminadas", "vegetariana")
     
-    # Este bucle se repite hasta que el cliente decida regresar
+    # Este bucle se repite hasta que el cliente decida regresar.
     while True:
         limpiar_pantalla()
         
         print("=" * 50)
         print("======  MENÚ DE PIZZAS =======")
         print("=" * 50)
-        print(f"1. Pizza Margarita   ${precio_margarita:,.0f}")
-        print(f"2. Pizza Pepperoni   ${precio_pepperoni:,.0f}")
-        print(f"3. Pizza Hawaiana    ${precio_hawaiana:,.0f}")
-        print(f"4. Pizza Vegetariana ${precio_vegetariana:,.0f}")
+        print(f"1. Pizza Margarita   ${precio_margarita:}")
+        print(f"2. Pizza Pepperoni   ${precio_pepperoni:}")
+        print(f"3. Pizza Hawaiana    ${precio_hawaiana:}")
+        print(f"4. Pizza Vegetariana ${precio_vegetariana:}")
         print("5. Regresar al menú principal")
         print("-" * 50)
         
-        # Pedimos que elija una opción
+        # Pedimos que elija una opción.
         try:
             opcion = int(input("Seleccione una opción: "))
             
-            # Validamos que la opción sea válida
+            # Validamos que la opción sea válida.
             if opcion < 1 or opcion > 5:
                 print("¡Opción inválida!... Intente de nuevo.")
                 time.sleep(1)
@@ -70,7 +70,7 @@ def mostrar_menu_pizzas(total_actual, precios):
         elif opcion == 4:
             total_actual += precio_vegetariana
         
-        print(f"¡Pizza agregada!. Total actual: ${total_actual:,.0f}")
+        print(f"¡Pizza agregada!. Total actual: ${total_actual:}")
         time.sleep(1)
     
     return total_actual

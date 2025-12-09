@@ -11,7 +11,7 @@ import json
 import os
 
 
-# Nombre del archivo donde guardamos los precios
+# Nombre del archivo donde guardamos los precios.
 ARCHIVO_PRECIOS = "precios.json"
 
 
@@ -22,7 +22,7 @@ def crear_precios_iniciales():
         dict: Diccionario con todos los precios organizados por categoría
     """
     precios = {
-        # Precios de pizzas predeterminadas
+        # Precios de pizzas predeterminadas.
         "pizzas_predeterminadas": {
             "margarita": 38000,
             "pepperoni": 20000,
@@ -30,21 +30,21 @@ def crear_precios_iniciales():
             "vegetariana": 21000
         },
         
-        # Precios según el tamaño de la pizza
+        # Precios según el tamaño de la pizza.
         "tamaños": {
             "pequeña": 10000,
             "mediana": 15000,
             "grande": 25000
         },
         
-        # Precios de los tipos de masa
+        # Precios de los tipos de masa.
         "masas": {
             "delgada": 1000,
             "gruesa": 2000,
             "borde_queso": 5000
         },
         
-        # Precios de ingredientes adicionales
+        # Precios de ingredientes adicionales.
         "adicionales": {
             "queso_extra": 3000,
             "champiñones": 3500,
@@ -52,7 +52,7 @@ def crear_precios_iniciales():
             "aceitunas": 4000
         },
         
-        # Precios de bebidas
+        # Precios de bebidas.
         "bebidas": {
             "gaseosa_personal": 3500,
             "gaseosa_familiar": 5500,
@@ -71,13 +71,13 @@ def cargar_precios():
         dict: Diccionario con todos los precios
     """
     try:
-        # Intentamos abrir y leer el archivo
+        # Intentamos abrir y leer el archivo.
         if os.path.exists(ARCHIVO_PRECIOS):
             with open(ARCHIVO_PRECIOS, 'r', encoding='utf-8') as archivo:
                 precios = json.load(archivo)
                 return precios
         else:
-            # Si no existe, creamos uno nuevo
+            # Si no existe, creamos uno nuevo.
             print("✓ Creando archivo de precios inicial...")
             precios = crear_precios_iniciales()
             guardar_precios(precios)
