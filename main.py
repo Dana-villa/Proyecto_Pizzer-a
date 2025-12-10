@@ -80,15 +80,17 @@ def main():
         # Sumamos al total general del día.
         total_general += (total_pizzas + total_bebidas)
 
+        
+
         # Ya atendimos todas las mesas, ahora mostramos el cierrede caja.
         limpiar_pantalla()
-        print("=" * 50)
-        print("     CIERRE DE CAJA DEL DÍA")
-        print(f"Total de mesas atendidas: {numero_mesas}")
-        print("=" * 50)
-        print()
-        print("Fin del programa... Presione Enter para salir.")
-        input()
+    print("=" * 50)
+    print("     CIERRE DE CAJA DEL DÍA")
+    print(f"Total de mesas atendidas: {numero_mesas}")
+    print("=" * 50)
+    print()
+    print("Fin del programa... Presione Enter para salir.")
+    input()
 
 
 # Este es el punto de entrada del programa
