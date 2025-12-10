@@ -69,7 +69,10 @@ def main():
 
         # Mostramos el menú principal y procesamos el pedido de la mesa.
         # La función retorna los totales de pizzas y bebidas.
-        total_pizzas, total_bebidas = mostrar_menu_principal(numero_mesa, precios)
+        total_pizzas, total_bebidas = mostrar_menu_principal(
+            numero_mesa, 
+            precios
+            )
 
         # Mostramos el resumen de esta mesa.
         mostrar_total_mesa(total_pizzas, total_bebidas, numero_mesa)

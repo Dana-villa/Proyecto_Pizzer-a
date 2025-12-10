@@ -19,6 +19,7 @@ def limpiar_pantalla():
 def pausar():
     """
     Hace una pausa para que el usuario pueda leer mensajes.
+    NOTA: Limpia la pantalla después de que el usuario presiona Enter.
     """
 
     print()
@@ -49,3 +50,29 @@ def mostrar_total_mesa(total_pizzas, total_bebidas, numero_mesa):
 
     # Esperamos 3 segundos para que puedan leer el resumen.
     time.sleep(3)    
+
+
+def obtener_opcion_valida(min_opcion, max_opcion, mensaje):
+    """
+    Centraliza la lógica para obtener una opción numérica válida del usuario, 
+    eliminando la duplicidad de código en los menús.    
+    Parámetros:
+        min_opcion (int): El número de opción más bajo permitido.
+        max_opcion (int): El número de opción más alto permitido.
+        mensaje (str): El mensaje a mostrar al usuario (el prompt).        
+    Retorna:
+        int: La opción válida seleccionada por el usuario.
+    """
+    while True:
+        try:
+            opcion = int(input(mensaje))
+            
+            if min_opcion <= opcion <= max_opcion:
+                return opcion
+            else:
+                print(f"¡Opción inválida!... Debe estar entre {min_opcion} y {max_opcion}.")
+                time.sleep(1)
+                
+        except ValueError:
+            print("ERROR: Debes ingresar un número válido.")
+            time.sleep(1)
